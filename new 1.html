@@ -1,0 +1,77 @@
+<html>
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+.call-btn{
+border:solid 1px #fff;
+display:block;
+padding:10px;
+position:fixed !important;
+bottom:20px !important;
+right:20px !important;
+cursor:pointer;
+color:#fff;
+font-size: 5vmin;
+background-color: #3498db;
+border-radius: 0.5em;
+box-shadow:
+0 0 0 0em rgba(#3498db, 0),
+0em 0.05em 0.1em rgba(#000000, 0.2);
+transform: translate3d(0, 0, 0) scale(1);
+}
+span.call-caption{
+font-family:'Raleway', sans-serif;
+font-size:2vmin;
+font-weight:400px;
+letter-spacing:1px;
+bottom:0;
+right:60px;
+line-height:49px;
+border-radius:0.5em;
+box-shadow:
+0 0 0 0em rgba(#3498db, 0),
+0em 0.05em 0.1em rgba(#000000, 0.2);
+transform: translate3d(0, 0, 0) scale(1);
+overflow:hidden;
+padding:0;
+position:absolute;
+white-space:nowrap;
+width:0;
+-webkit-transition:0.50s;
+-moz-transition:0.50s;
+transition:0.50s;
+}
+.call-btn:hover .call-caption{
+width:auto !important;
+padding:0 30px !important;
+overflow:visible !important;
+}
+.call-btn:hover{
+text-decoration:none;
+}
+.call-caption{
+background-color:#3498db;
+color:white;
+}
+</style>
+</head>
+<body>
+<a class="call-btn"><i class="fa fa-phone-alt"></i><span class="call-caption">Request a Call</span></a>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+setTimeout(function(){
+$(".call-caption").css("overflow","visible");
+$(".call-caption").css("width","auto");
+$(".call-caption").css("padding","0 30px");
+},2000);
+setTimeout(function(){
+$(".call-caption").css("overflow","hidden");
+$(".call-caption").css("width","0");
+$(".call-caption").css("padding","0");
+},5000);
+});
+</script>
+</html>
